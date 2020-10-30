@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const auth = require("../../middleware/auth");
-const request = require("request");
-const config = require("config");
 const { check, validationResult } = require("express-validator");
 const Profile = require("../../models/Profile");
 const User = require("../../models/User");
@@ -15,7 +13,7 @@ router.get("/me", auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({
       user: req.user.id,
-    }).populate("user", ["name", "avatar"]);
+    }).populate("user", ["firstname", "lastname"]);
     console.log(req.user.id);
     if (!profile) {
       return res.status(400).json({ msg: "There is no profile for this user" });
@@ -35,7 +33,7 @@ router.post(
   [
     auth,
     [
-      // check("avatar", "Please upload a profile photo ").not().isEmpty(),
+     
       check("age", "Please enter your age").not().isEmpty(),
       check("gender", "Please define your gender").not().isEmpty(),
       check("weight", "Please enter your weight").not().isEmpty(),

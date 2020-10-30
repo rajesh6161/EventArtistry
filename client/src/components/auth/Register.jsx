@@ -35,7 +35,7 @@ const Register = ({ register, setAlert, isAuthenticated }) => {
 
   return (
     <div id="registerpage" className="container">
-      <h1 className="text-center" style={{marginTop: "15px"}} id="auth-header-register">Register Page</h1>
+      <h1 className="text-center" style={{marginTop: "15px"}} id="auth-header-register">Create A New Account</h1>
       <div id="registerPage">
       <Form onSubmit={onSubmit}>
   <Form.Row>
@@ -65,9 +65,9 @@ const Register = ({ register, setAlert, isAuthenticated }) => {
       <Form.Control onChange={(e) => onChange(e)} value={password2} name="password2" type="password" placeholder="Re-enter Password" />
     </Form.Group>
 
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
+  <button type="submit" className="submit_button">
+    <span className="btn_label">Register</span>
+  </button>
 </Form>
       </div>
     </div>

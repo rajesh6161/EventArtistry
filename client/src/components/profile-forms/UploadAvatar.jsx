@@ -62,11 +62,11 @@ const UploadAvatar = ({addAvatar, history}) => {
   <div className="imageUploader">
   <div className="box-1">
     <input type="file"/>
-    <Button style={{marginTop: 10}} variant="primary" onClick={uploadAvatar}>Upload</Button>
-    <Button className="mt-3" variant="secondary" onClick={submitHandler}>Save and Go Back To Dashboard</Button>
+    <Button style={{marginTop: 10}} variant="warning" onClick={uploadAvatar}>Upload</Button>
+    <Button className="mt-3" variant="dark" onClick={submitHandler}>Save and Go Back To Dashboard</Button>
   </div>
   <div className="box-2">
-    <p>The resulting image will be displayed here</p>
+    <p>Please wait until image isn't displayed</p>
     {avatar && (
       <img src={avatar} alt="Profile Image" className="displayed-image"/>
     )}

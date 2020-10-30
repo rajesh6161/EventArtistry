@@ -16,7 +16,7 @@ const Profiles = ({ profile: { profiles, loading }, getProfiles }) => {
         <h5>Loading...</h5>
       ) : (
         <Fragment>
-          <h1 id="avprofile" className="large text-secondary">
+          <h1 id="avprofile" className="large text-dark">
             Available <i className="fab fa-connectdevelop text-primary" />{" "}
             Profiles
           </h1>

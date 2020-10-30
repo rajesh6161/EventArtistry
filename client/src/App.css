@@ -8,29 +8,6 @@
   max-width: 500px;
 }
 
-.file-upload-container {
-  width: 100%;
-  height: 50px;
-  overflow: hidden;
-  background: #3f51b5;
-  user-select: none;
-  transition: all 150ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-  text-align: center;
-  color: white;
-  line-height: 50px;
-  font-weight: 300;
-  font-size: 20px;
-}
-
-.file-upload-container:hover {
-  cursor: pointer;
-  background: #3949ab;
-}
-
-.upload {
-  width: 200px;
-}
-
 #profile-top-card {
   margin: auto;
   width: 600px;
@@ -53,15 +30,27 @@ a {
   width: 155px;
 }
 
-.footer {
+/* .footer {
   position: absolute;
   bottom: 0;
-  background-color: #343a40;
+  background-color: black;
   width: 100%;
   height: 3.5rem;
-}
+  color: #fff;
+} */
 .foo {
-  padding-top: 45px;
+  padding-top: 155px;
+}
+.footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer_logo img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
 }
 #main {
   position: relative;
@@ -114,6 +103,173 @@ a {
 .text {
   font-size: 15px;
 }
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./components/layout/dark.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 43rem;
+}
+._flex_inner {
+  width: 800px;
+}
+.text-bolder {
+  font-weight: 900 !important;
+}
+.tag {
+  font-weight: bold;
+  color: bisque;
+}
+#black {
+  background-color: black !important;
+}
+
+#cursive {
+  font-family: "Pacifico", cursive;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.animate_link {
+  animation: flow 3s ease-in-out infinite;
+  background: linear-gradient(-60deg, #f56a3b, #f59b25, #f5dc3b);
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer_tag p {
+  font-size: 21px;
+  padding-top: 10px;
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.view_profile {
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  background-image: linear-gradient(
+    to left,
+    #f6d365 0%,
+    #f56a3b 51%,
+    #f59b25 100%
+  );
+  border: none !important;
+}
+.view_profile:hover {
+  background-position: right center;
+  transition: 0.5s; /* change the direction of the change here */
+}
+
+.link_nav {
+  color: antiquewhite;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.link_nav:hover {
+  animation: flow 3s ease-in-out infinite;
+  background: linear-gradient(-60deg, #f56a3b, #f59b25, #f5dc3b);
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.link_nav:focus {
+  animation: flow 3s ease-in-out infinite;
+  background: linear-gradient(-60deg, #f56a3b, #f59b25, #f5dc3b);
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,200italic);
+
+.submit_button {
+  background: transparent;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 0em;
+  font-weight: 300;
+  width: 130px;
+  height: auto;
+  padding: 20px 0;
+  border: 1px solid #363858 !important;
+  overflow: hidden;
+  display: inline-block;
+  transition: all 0.5s;
+  box-shadow: 0px 3px 0px #363858;
+  border-radius: 4px;
+}
+.submit_button:focus,
+.submit_button:active {
+  text-decoration: none;
+  color: #fff;
+  border-color: #363858;
+  background: #363858;
+  box-shadow: 0 0 0 #363858;
+}
+.btn_label {
+  display: inline-block;
+  position: relative;
+  padding-right: 0;
+  transition: padding-right 0.5s;
+  color: #363858;
+  font-weight: 200;
+  font-family: "Exo 2", sans-serif;
+}
+
+.btn_label:after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  opacity: 0;
+  top: 22%;
+  width: 10px;
+  height: 10px;
+  margin-right: -10px;
+  background: rgba(0, 0, 0, 0);
+  border: 3px solid #fff;
+  border-top: none;
+  border-right: none;
+  transition: opacity 0.5s, top 0.5s, right 0.5s;
+  transform: rotate(225deg);
+}
+.submit_button:focus .btn_label,
+.submit_button:active .btn_label {
+  padding-right: 30px;
+  color: #f5f1e7;
+}
+
+.submit_button:focus .btn_label:after,
+.submit_button:active .btn_label:after {
+  transition: top 0.5s, right 0.5s;
+  opacity: 1;
+  right: 10px;
+  top: 22%;
+}
+
 @media only screen and (max-width: 600px) {
   #loginpage {
     margin-bottom: 245px;
@@ -161,5 +317,40 @@ a {
   #avprofile {
     font-size: 28px;
     text-align: center;
+  }
+  #auth-header-register {
+    font-size: 30px;
+  }
+  ._flex_inner h1 {
+    font-size: 45px;
+  }
+  ._flex_inner h4 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("./components/layout/dark.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+  }
+  .nav-brand {
+    font-size: 28px;
+  }
+  ._h3_edit {
+    font-size: 23px;
+  }
+  ._h1_edit {
+    font-size: 30px !important;
+    text-align: center;
+  }
+  .table {
+    margin-top: 30px;
+  }
+  .table h4 {
+    margin-bottom: -15px;
   }
 }

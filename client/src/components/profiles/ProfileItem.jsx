@@ -45,7 +45,7 @@ const ProfileItem = ({
           <Link
             to={`/profile/${_id}`}
             style={{ width: "100%" }}
-            className="btn btn-primary mt-3"
+            className="btn btn-primary mt-3 view_profile"
           >
             View Profile
           </Link>

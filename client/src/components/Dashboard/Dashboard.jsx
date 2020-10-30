@@ -15,7 +15,7 @@ const Dashboard = ({getCurrentProfile, auth: {user}, profile: {profile, loading}
   }, [getCurrentProfile])
 
   return loading && profile === null ? <Spinner id="spinner" animation="grow" /> : <div className="container">
-    <h1 className="mt-3" id="heading"><i className="fas fa-user" />{' '}Welcome <span className="text-primary">{user && user.firstname +' '+user.lastname}</span></h1>
+    <h1 className="mt-3" id="heading"><i className="fas fa-user animate_link" />{' '}Welcome <span className="text-primary">{user && user.firstname +' '+user.lastname}</span></h1>
 {profile === null ? "" : (<small>Created On: <Moment format="DD/MM/YYYY">
                 {profile.date}
             </Moment></small>)}
@@ -23,10 +23,10 @@ const Dashboard = ({getCurrentProfile, auth: {user}, profile: {profile, loading}
     {profile !== null ? (
       <DashboardAction profile={profile} user={user}/>
     ): <Fragment>
-    <p>You have not setup a profile.😯 Please add some info💜</p>
+    <p>You haven't created a profile.😯 Please add some info💜</p>
     <Link
       to="/create-profile"
-      className="btn btn-primary my-1"
+      className="btn btn-primary my-1 view_profile"
     >
       Create Profile
     </Link>

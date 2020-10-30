@@ -31,7 +31,7 @@ const Login = ({ login, isAuthenticated }) => {
   
       <div className="container" id="loginpage">
         <Card></Card>
-    <h1 className="text-center" id="auth-header-login" style={{marginTop: "15px"}}>Login Page</h1>
+    <h1 className="text-center" id="auth-header-login" style={{marginTop: "15px"}}>Welcome Back</h1>
     <div id="loginPage">
     <Form onSubmit={onSubmit}>
 
@@ -48,9 +48,9 @@ const Login = ({ login, isAuthenticated }) => {
 
   
 
-<Button variant="primary" type="submit">
-  Submit
-</Button>
+  <button type="submit" className="submit_button">
+    <span className="btn_label">Login</span>
+  </button>
 </Form>
     </div>
   </div>

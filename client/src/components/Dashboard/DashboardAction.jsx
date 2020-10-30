@@ -8,9 +8,9 @@ const DashboardAction = ({profile, user}) => {
         <div>
             <Row>
               <Col xs="12" md="8">
-              <Card className="mb-3">
+              <Card className="mb-3" border="info">
                 <Card.Header as="h5">Your Profile Details</Card.Header>
-                {!profile.avatar ? <Link className="btn btn-primary" to="/profile-photo">Click Here To Add Photo</Link> : (
+                {!profile.avatar ? <Link className="btn btn-warning" to="/profile-photo">Click Here To Add Photo</Link> : (
                     <Card.Img id="_daImage" variant="top" src={profile.avatar} />
                 )}
             <Card.Body>
@@ -76,7 +76,7 @@ const DashboardAction = ({profile, user}) => {
                     </tbody>
                 </Table>
 
-                <Link to="/edit-profile"><Button variant="primary">Edit Profile</Button></Link>
+                <Link to="/edit-profile"><Button  variant="dark">Edit Profile</Button></Link>
                 
             </Card.Body>
             </Card>
